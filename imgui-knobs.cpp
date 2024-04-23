@@ -197,22 +197,22 @@ namespace ImGuiKnobs {
         color_set GetPrimaryColorSet() {
             auto *colors = ImGui::GetStyle().Colors;
 
-            return {colors[ImGuiCol_ButtonActive], colors[ImGuiCol_ButtonHovered], colors[ImGuiCol_ButtonHovered]};
+            return {colors[ImGuiCol_TableRowBgAlt], colors[ImGuiCol_TableRowBgAlt], colors[ImGuiCol_TableRowBgAlt]};
         }
 
         color_set GetSecondaryColorSet() {
             auto *colors = ImGui::GetStyle().Colors;
             auto active = ImVec4(
-                    colors[ImGuiCol_ButtonActive].x * 0.5f,
-                    colors[ImGuiCol_ButtonActive].y * 0.5f,
-                    colors[ImGuiCol_ButtonActive].z * 0.5f,
-                    colors[ImGuiCol_ButtonActive].w);
+                    colors[ImGuiCol_SliderGrab].x * 0.5f,
+                    colors[ImGuiCol_SliderGrab].y * 0.5f,
+                    colors[ImGuiCol_SliderGrab].z * 0.5f,
+                    colors[ImGuiCol_SliderGrab].w);
 
             auto hovered = ImVec4(
-                    colors[ImGuiCol_ButtonHovered].x * 0.5f,
-                    colors[ImGuiCol_ButtonHovered].y * 0.5f,
-                    colors[ImGuiCol_ButtonHovered].z * 0.5f,
-                    colors[ImGuiCol_ButtonHovered].w);
+                    colors[ImGuiCol_SliderGrab].x * 0.5f,
+                    colors[ImGuiCol_SliderGrab].y * 0.5f,
+                    colors[ImGuiCol_SliderGrab].z * 0.5f,
+                    colors[ImGuiCol_SliderGrab].w);
 
             return {active, hovered, hovered};
         }
@@ -220,7 +220,7 @@ namespace ImGuiKnobs {
         color_set GetTrackColorSet() {
             auto *colors = ImGui::GetStyle().Colors;
 
-            return {colors[ImGuiCol_FrameBg], colors[ImGuiCol_FrameBg], colors[ImGuiCol_FrameBg]};
+            return {colors[ImGuiCol_TabHovered], colors[ImGuiCol_TabHovered], colors[ImGuiCol_TabHovered]};
         }
     }// namespace detail
 
